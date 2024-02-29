@@ -43,7 +43,7 @@ class ViewController: UIViewController {
             updateCounterLabel()
             updateHistory(with: "[\(getCurrentDateTime())]:значение изменено на -1")
         } else {
-            updateHistory(with: "[\(getCurrentDateTime())]:aпопытка уменьшить значение счётчика ниже 0 ")
+            updateHistory(with: "[\(getCurrentDateTime())]:попытка уменьшить значение счётчика ниже 0 ")
         }
     }
     
