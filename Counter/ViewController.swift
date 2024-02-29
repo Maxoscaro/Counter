@@ -57,5 +57,11 @@ class ViewController: UIViewController {
         let range = NSMakeRange(historyText.text.count - 1, 1)
         historyText.scrollRangeToVisible(range)
     }
- 
+    
+    
+    func getCurrentDateTime() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy HH:mm:ss"
+        return formatter.string(from: Date())
+    }
 }
