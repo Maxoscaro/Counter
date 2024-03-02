@@ -43,7 +43,7 @@ class ViewController: UIViewController {
             updateCounterLabel()
             updateHistory(with: "[\(getCurrentDateTime())]:значение изменено на -1")
         } else {
-            updateHistory(with: "[\(getCurrentDateTime())]:aпопытка уменьшить значение счётчика ниже 0 ")
+            updateHistory(with: "[\(getCurrentDateTime())]:попытка уменьшить значение счётчика ниже 0 ")
         }
     }
     
@@ -57,5 +57,11 @@ class ViewController: UIViewController {
         let range = NSMakeRange(historyText.text.count - 1, 1)
         historyText.scrollRangeToVisible(range)
     }
- 
+    
+    
+    func getCurrentDateTime() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy HH:mm:ss"
+        return formatter.string(from: Date())
+    }
 }
